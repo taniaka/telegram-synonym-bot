@@ -1,0 +1,1 @@
+web: python synonym-bot.py 
