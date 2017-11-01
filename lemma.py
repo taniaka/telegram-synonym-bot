@@ -55,7 +55,7 @@ class Lemma:
 		# all possible combinations of 2 or more synonyms from different synsets.
 		# TODO: give priority to longer combinations
 		combinations = 	list(itertools.product(*cleared_synsets))
-		valid_combinations = [set(combination)
+		valid_combinations = [list(set(combination))
 							  for combination in combinations
 							  if len(set(combination)) >= 2]
 		return valid_combinations	
