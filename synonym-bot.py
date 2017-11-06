@@ -177,7 +177,7 @@ def error(bot, update, error):
 
 def main():	
 
-	updater = Updater(token=os.environ.get(TELEGRAM_TOKEN))
+	updater = Updater(token=os.environ.get('TELEGRAM_TOKEN'))
 	dispatcher = updater.dispatcher
 
 	conv_handler = ConversationHandler(
