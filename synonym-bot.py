@@ -7,6 +7,7 @@ This Bot is based on data from the WordNet project.
 """
 
 import logging
+import os
 
 from telegram import ReplyKeyboardMarkup
 from telegram.ext import (
@@ -20,7 +21,6 @@ from telegram.ext import (
 
 from lemma import GameManager, Lemma
 
-from secret import ACCESS_TOKEN
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -177,7 +177,7 @@ def error(bot, update, error):
 
 def main():	
 
-	updater = Updater(token=ACCESS_TOKEN)
+	updater = Updater(token=os.environ.get(TELEGRAM_TOKEN))
 	dispatcher = updater.dispatcher
 
 	conv_handler = ConversationHandler(
