@@ -1,1 +1,1 @@
-worker: python synonym-bot.py 
+web: python synonym-bot.py 

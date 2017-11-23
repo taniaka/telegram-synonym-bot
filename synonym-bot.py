@@ -165,7 +165,8 @@ def skip_new_try(bot, update):
 def done(bot, update):
 	update.message.reply_text(
 		"Hope you enjoyed our synonym game. "
-		"We hope to see you again for more synonym guessing.")
+		"We hope to see you again for more synonym guessing."
+		"To start a new game session, please type /start.")
 	return ConversationHandler.END
 
 
