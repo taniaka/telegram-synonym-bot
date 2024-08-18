@@ -1,6 +1,6 @@
 ## TELEGAM SYNONYM BOT
 
-A simple Telegram Bot that lets you guess words based on their synonyms.
+A simple Telegram Bot for guessing words based on their synonyms.
 
 Currently available in English and Spanish.
 
