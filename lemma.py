@@ -2,6 +2,7 @@ import itertools
 import json
 import copy
 from random import sample, choice
+from pathlib import Path
 
 from nltk.corpus import wordnet as wn
 from fuzzywuzzy import fuzz
@@ -93,7 +94,11 @@ class Lemma:
 
 class GameManager:
 
-	with open('data/all_words.json') as f:
+	# get absolute path to json with lemmas
+	THIS_FOLDER = Path(__file__).parent.resolve()
+	my_file = THIS_FOLDER / "data/all_words.json"
+
+	with open(my_file) as f:
 		ALL_LEMMAS = json.load(f)
 
 	def __init__(self, pos="n", lang="eng"):
